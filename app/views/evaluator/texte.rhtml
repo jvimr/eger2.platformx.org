@@ -1,0 +1,26 @@
+Seznam textu
+
+<table border="1">
+
+<tr><th >autor</th><th>nazev</th><th>fertig</th><th>skore</th><th>testovat</th></tr>
+
+<% for text in @test_pages %>
+
+  <tr>
+     <td><%= text.author %></td>	
+	   <td><%= text.description %></td>
+     <td> <%= text.fertig ? "J" : "N" %> </td>
+		 <td> <%= text.skore %> </td>
+     <td> <%= link_to "testovat>", { :action=> 'texte_test', :id=>text }  %> </td>
+	</tr>
+	
+	
+<% end %>
+
+</table>
+
+<%= 
+link_to 'Previous page', { :page => @test_pages_pages.current.previous } if @test_pages_pages.current.previous 
+%>
+<%= link_to 'Next page', { :page => @test_pages_pages.current.next } if @test_pages_pages.current.next 
+%> 

@@ -1,0 +1,2 @@
+module TestTypeHelper
+end

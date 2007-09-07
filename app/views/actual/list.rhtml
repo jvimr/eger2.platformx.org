@@ -1,0 +1,27 @@
+<h1>Listing actuals</h1>
+
+<table>
+  <tr>
+  <% for column in Actual.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for actual in @actuals %>
+  <tr>
+  <% for column in Actual.content_columns %>
+    <td><%=h actual.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => actual %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => actual %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => actual }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @actual_pages.current.previous } if @actual_pages.current.previous %>
+<%= link_to 'Next page', { :page => @actual_pages.current.next } if @actual_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New actual', :action => 'new' %>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title> <%= @title %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+
+<div class="nad_hlavicka"><h1><%= @title %></h1></div>
+
+<hr />
+<div class="radek_odkazu">&nbsp;[<a href="http://www.zcu.cz">ZCU</a>]&nbsp;[FEK]&nbsp;[KJA]&nbsp;[Contact us]&nbsp;[CESNET]&nbsp;[FRVS]&nbsp;[IIK]&nbsp;[WD]&nbsp;[LEHRERONLINE]&nbsp;[JESTA.NET]&nbsp;</div>
+<hr />
+
+<table border="0" width="100%">
+	<tr valign="top">
+		<td class="menu_vlevo" width="10%" align="right" valign="top">
+		Tady bude menu:<br />
+		-<%= link_to "home", {:action => 'home', :controller=> 'evaluator'} %> <br />
+		- <%= link_to "arbeitsblatter handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator'} %> <br />
+		-<%= link_to "arbeitsblatter grammatik", { :action => 'grammatik', :controller=>'evaluator' } %><br />
+			-<%= link_to "online ubungen audio", { :action=>'audio', :controller=>'evaluator' } %><br />
+			-<%= link_to "online ubungen texte", { :action=>'texte', :controller=>'evaluator' } %><br />
+			
+			<br />
+			-mail me		<br />
+			-kontakt <br />
+			-FRVS <br/>
+			-links <br />
+			
+		</td>
+		<td class="obsah" width="80%" valign="top">
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+			
+		</td>
+	</tr>
+</table>
+
+
+
+<hr>
+<div class="paticka"><small><center>(C) ZCU 2007 (paticka)</center></small></div>
+</body>
+</html>

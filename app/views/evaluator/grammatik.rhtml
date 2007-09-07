@@ -1,0 +1,14 @@
+
+
+<% for text in @test_pages %>
+  <b> <%= text.name %> </b> <br />
+	> link <br />
+	<%= text.top_text %>
+	<br />
+	<hr />
+	
+	
+<% end %>
+
+<%= link_to 'Previous page', { :page => @test_pages_pages.current.previous } if @test_pages_pages.current.previous %>
+<%= link_to 'Next page', { :page => @test_pages_pages.current.next } if @test_pages_pages.current.next %> 

@@ -1,0 +1,35 @@
+<%= error_messages_for 'test_page' %>
+
+<!--[form:test_page]-->
+<p><label for="test_page_author">Author</label><br/>
+<%= text_field 'test_page', 'author'  %></p>
+
+<p><label for="test_page_name">Name</label><br/>
+<%= text_field 'test_page', 'name'  %></p>
+
+<p><label for="test_page_description">Description</label><br/>
+<%= text_field 'test_page', 'description'  %></p>
+
+<p><label for="test_page_top_text">Top text</label><br/>
+<%= text_field 'test_page', 'top_text'  %></p>
+
+<p><label for="test_page_test_text">Test text</label><br/>
+<%= text_field 'test_page', 'test_text'  %></p>
+
+<p><label for="test_page_create_date">Create date</label><br/>
+<%= datetime_select 'test_page', 'create_date'  %></p>
+
+<p><label for="test_page_modify_date">Modify date</label><br/>
+<%= datetime_select 'test_page', 'modify_date'  %></p>
+
+<p><label for="test_page_deleted">Deleted</label><br/>
+<select id="test_page_deleted" name="test_page[deleted]"><option value="false" selected>False</option><option value="true">True</option></select></p>
+
+<p><label for="test_page_test_type_id">Test Type</label><br />
+<%= select "test_page", "test_type_id", @testTypes.collect {|p| [ p.name, p.id ] }, { :include_blank => false, :selected => @test_page.test_type_id } %></p>
+
+<p><label for="test_page_language_id">Lang</label><br />
+<%= select "test_page", "language_id", @languages.collect {|p| [ p.language_name, p.id ] }, { :include_blank => false, :selected => @test_page.language_id } %></p>
+
+<!--[eoform:test_page]-->
+
