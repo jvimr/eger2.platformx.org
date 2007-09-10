@@ -64,8 +64,34 @@ class EvaluatorController < ApplicationController
 		@test_pages.each do |p|
 					p.skore = 5
 					p.fertig = false
-				end		
+		end		
 		
 	end
+	
+	def texte_test
+		@title = "Online ubungen texte"
+		
+		@test_page = TestPage.find params[:id]
+	end
+	
+	def texte_eval
+		
+		flash[:notice] = 'Test id ' + params[:id] + ' successfully done.'
+	    redirect_to :action => 'texte'		
+		
+	end
+	
+	def audio_test
+		@title = "Online ubungen audio"
+		
+		@test_page = TestPage.find params[:id]
+	end
+	
+	def audio_eval
+			
+			flash[:notice] = 'Test id ' + params[:id] + ' successfully done.'
+			redirect_to :action => 'audio'		
+			
+   	end	
 	
 end

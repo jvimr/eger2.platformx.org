@@ -1,0 +1,20 @@
+<%= @test_page.author %>,
+<%= @test_page.description %> <br />
+
+<%= @test_page.top_text %>
+<hr />
+
+<% form_tag :action => 'audio_eval', :id => @test_page do %>
+
+<%= @test_page.test_text %>
+  
+	<br />
+	
+  <%= submit_tag '[Send]' %>
+<% end %>
+
+
+<%= link_to 'Back', :action => 'adio' %>
+
+
+
