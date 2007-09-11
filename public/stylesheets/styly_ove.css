@@ -1,0 +1,27 @@
+H1 
+	{ font-family: verdana; color: #243141; font-size: 12px; font-weight: bold; }
+
+P.paticka 
+ 	{ font-family: verdana; color: #243141; font-size: 9px; text-decoration: none; text-align: left;}
+P.head 
+ 	{ font-family: verdana; color: #ff9804; font-size: 11px; text-decoration: none; letter-spacing: 1px;}	
+P.n 
+ 	{ font-family: verdana; color: black; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px;}
+P.menu
+	{ font-family: verdana; color: #0e4613; font-size: 11px; line-height: 20px; text-align: right; letter-spacing: 1px; }
+P.menu2
+	{ font-family: verdana; color: #e04613; font-size: 11px; line-height: 20px; text-align: right; letter-spacing: 1px; }
+P.kurz 
+ 	{ font-family: verdana; color: #0e4613; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px; font-style: italic; }
+P.fragen 
+ 	{ font-family: verdana; color: #e04613; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px;  }
+A.menu
+	{ font-family: verdana; color: #0e4613; font-size: 11px;  text-decoration: none; }
+A.text
+	{ font-family: verdana; color: #ff9804; font-size: 11px;  text-decoration: none; }
+UL.normalni
+	{ font-family: verdana; color: Gray; font-size: 11px;  text-decoration: none; text-align: justify; }	
+BLOCKQUOTE
+	{ font-family: verdana; color: #e04613; font-size: 11px; text-align: left; letter-spacing: 1px; }
+TD.d
+ 	{ font-family: verdana; color: #e04613; font-size: 11px; line-height: 15px; text-align: justify;  }

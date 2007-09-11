@@ -1,5 +1,10 @@
 class EvaluatorController < ApplicationController
 	
+	def initialize
+		@f = TwikiFormator.new
+	end
+	
+	
 	def index
 		#layout 'empty'
 		@title = "index"
@@ -72,6 +77,8 @@ class EvaluatorController < ApplicationController
 		@title = "Online ubungen texte"
 		
 		@test_page = TestPage.find params[:id]
+		
+		@test_page.top_text = @f.format @test_page.top_text
 	end
 	
 	def texte_eval

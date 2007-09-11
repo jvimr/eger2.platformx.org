@@ -1,0 +1,22 @@
+<h2> edit test id <%= @test_page.id %></h2>
+
+<% form_tag :action => 'update', :id => @test_page do %>
+
+
+  <%= render :partial => 'form' %>
+
+
+  
+  
+  
+  <% end %>
+  
+<%= link_to "zobrazit", { :action=> 'view', :id=> @test_page } , :confirm=> 'Test nebyl ulozen. Zobrazit bez ulozeni zmen?' %> 
+
+<%= link_to 'Formatovani textu', '/TwikiHelp.html', :action=>nil %>
+
+  
+ 
+ 
+<br/>
+<iframe src="/TwikiHelp.html" height="800" width="800" scrolling="yes"/>

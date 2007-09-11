@@ -1,0 +1,92 @@
+
+
+
+<table >
+  <tr>
+    <td>
+    	<label for="test_page_name">Jmeno testu</label>
+      
+    </td>
+    <td>
+    	<%= text_field 'test_page', 'name', 'width'=>40  %>
+      
+    </td>
+  </tr>
+  <tr>
+    <td>
+    	<label for="test_page_author">Autor</label>
+
+    </td>
+    <td>
+    	<%= text_field 'test_page', 'author', 'width'=>40 %>  
+      
+   </td>
+  </tr>
+  <tr>
+    <td>
+    	<label for="test_page_description">Nadpis</label>
+      
+    </td>
+    <td>
+    	<%= text_field 'test_page', 'description', 'width'=>40 %>  
+      
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+    	<label for="test_page_language_id">Jazyk</label>
+      
+    </td>
+    <td>
+       <%= select "test_page", "language_id", @languages.collect {|p| [ p.language_name, p.id ] }, { :include_blank => false, :selected => @test_page.language_id } %>
+
+    
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    	<label for="test_page_test_type_id">Typ testu</label>
+      
+    </td>
+    <td>
+       <%= select "test_page", "test_type_id", @testTypes.collect {|p| [ p.name, p.id ] }, { :include_blank => false, :selected => @test_page.test_type_id } %>
+
+    
+    </td>
+  </tr>
+
+	
+</table>
+  
+	<br />
+     
+  
+	<%= submit_tag '[Ulozit]' %>   
+  
+  <br />
+     
+     
+
+  <br />
+	<label for="test_page_top_text">Clanek</label>
+  <br />
+  <%= text_area 'test_page', 'top_text', 'cols'=>80, 'rows'=>20 %>
+  
+  <br />
+	
+	 <label for="test_page_text_text">Cviceni</label>
+    
+   <br />
+	 
+	 <%= text_area 'test_page', 'test_text', 'rows'=>20, 'cols'=>80 %>  
+    
+  <br />
+    
+   <%= submit_tag '[Ulozit]' %>
+
+
+  
+  
+  

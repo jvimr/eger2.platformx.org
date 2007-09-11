@@ -20,11 +20,8 @@
 	  <td width="200" height="250" colspan="0" rowspan="0" align="right" valign="top" bgcolor="#f1f1e5">
 
 		
-		-<%= link_to "home", {:action => 'home', :controller=> 'evaluator', :class => 'menu'} %> <br />
-		- <%= link_to "arbeitsblatter handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator', :class=>'menu'} %> <br />
-		-<%= link_to "arbeitsblatter grammatik", { :action => 'grammatik', :controller=>'evaluator' , :class=>'menu'} %><br />
-			-<%= link_to "online ubungen audio", { :action=>'audio', :controller=>'evaluator' , :class=>'menu'} %><br />
-			-<%= link_to "online ubungen texte", { :action=>'texte', :controller=>'evaluator', :class=>'menu' } %><br />
+		-<%= link_to "home", {:action => 'index'},  'class' => 'menu' %> <br />
+		- <%= link_to "zadat novy test", { :action=> 'new'}, 'class'=>'menu' %> <br />
 			
 			<br />
 			-mail me		<br />

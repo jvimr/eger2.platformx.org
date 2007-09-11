@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>Jak na formatovani</title>
+	</head>
+	<body>
+		<h2>jak na formatovani</h2>
+		
+		<table border="1">
+			<tr>
+				<th>text</th>
+				<th>vysledek</th>
+			</tr>
+			
+			<tr>
+				<td>---</td><td>vodorovna cara &lt;hr&gt;<br/><hr/></td>
+			</tr>
+			
+			<tr>
+				<td>prazdna radka</td><td>novy odstavec &lt;p&gt; </td>
+				
+			</tr>
+			<tr>
+				<td>1 text<br/>1 text2<br/>cislo text3<br/>0</td>
+				<td>cislovany seznam<ol>
+					
+					  <li>text</li>
+					  <li>text2</li>
+					  <li>text3</li>
+					</ol>
+					musi byt ukoncen nulou na samostatnem radku
+					</td>
+			</tr>
+			<tr>
+				<td>* text<br/>* text2<br/>* text3<br/>0</td>
+				<td>necislovany (odrazkovy) seznam<ul>
+					  <li>text</li>
+					  <li>text2</li>
+					  <li>text3</li>
+					</ul>
+					musi byt ukoncen nulou na samostatnem radku
+					</td>
+			</tr>
+
+
+			
+			<tr>
+				<td>| nadpis1 | nadpis2 | nadpis3 |<br/>
+					| text1 | text2 | text3 |<br/>
+					| text 4 | text5 | text6 |<br/>
+					praznda radka
+					</td>
+					<td>tabulka
+						<table border="1">
+							<tr>
+								<td>nadpis1</td>
+								<td>nadpis2</td>
+								<td>nadpis3</td>																
+							</tr>
+							<tr>
+								<td>text1</td>
+								<td>text2</td>
+								<td>text3</td>																
+							</tr>
+							<tr>
+								<td>text4</td>
+								<td>text5</td>
+								<td>text6</td>																
+							</tr>
+							
+						</table>
+						
+						</td>
+			</tr>
+			<tr>
+				<td>*[moznost1|moznost2|moznost3|*spravna_moznost1|moznost4|*spravna_moznost2]</td>
+				<td> <input type="radio"/>moznost1
+					<br/><input type="radio"/>moznost2
+					<br/><input type="radio"/>moznost3
+					<br/><input type="radio"/>spravna_moznost1
+					<br/><input type="radio"/>moznost4
+					<br/><input type="radio"/>spravna_moznost2					
+				</td>
+			</tr>
+			<tr>
+				<td>[moznost1|moznost2|moznost3|*spravna_moznost1|moznost4|*spravna_moznost2]</td>
+				<td>
+					<select>
+						<option>moznost1</option>
+						<option>moznost2</option>
+						<option>moznost3</option>
+						<option>spravna_moznost1</option>
+						<option>moznost4</option>
+						<option>spravna_moznost2</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>.....[*moznost1|*moznost2|*moznost3]</td>
+				<td><input type="text"/> </td>
+			</tr>
+		</table>
+		
+		
+		
+	</body>
+ 	
+	
+</html>
