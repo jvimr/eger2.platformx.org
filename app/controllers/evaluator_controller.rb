@@ -79,6 +79,7 @@ class EvaluatorController < ApplicationController
 		@test_page = TestPage.find params[:id]
 		
 		@test_page.top_text = @f.format @test_page.top_text
+		@test_page.test_text = @f.format @test_page.test_text
 	end
 	
 	def texte_eval

@@ -87,5 +87,18 @@ class TwikiFormatorTest < Test::Unit::TestCase
 			@logger.debug "line [" + line + "] converted to [" + l + "]"
 	end
 		
+	def test_ul
+				@logger = Logger.new(STDOUT) unless @logger
+									
+				t = TwikiFormator.new
+								
+				line = "---\n* item1 \n*item2\n*item 3 \n 0\n\n\n\n"
+								
+				l = t.format(line)		
+				
+				@logger.debug "line [" + line + "] converted to [" + l + "]"
+	end
+		
+	
 	
   end
