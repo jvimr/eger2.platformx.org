@@ -39,19 +39,14 @@
       
     </td>
     <td>
-       <%= select "test_page", "language_id", @languages.collect {|p| [ p.language_name, p.id ] }, { :include_blank => false, :selected => @test_page.language_id } %>
-
+       <%= select "test_page", "language_id", @languages.collect {|p| [ p.language_name, p.id ] }, { :include_blank => false, :selected => @test_page.language_id }, :disabled=>'true' %>
+,
     
-    </td>
-  </tr>
-
-  <tr>
-    <td>
     	<label for="test_page_test_type_id">Typ testu</label>
       
     </td>
     <td>
-       <%= select "test_page", "test_type_id", @testTypes.collect {|p| [ p.name, p.id ] }, { :include_blank => false, :selected => @test_page.test_type_id } %>
+       <%= select "test_page", "test_type_id", @testTypes.collect {|p| [ p.name, p.id ] }, { :include_blank => false, :selected => @test_page.test_type_id }, :disabled=>'true' %>
 
     
     </td>
@@ -70,10 +65,16 @@
      
 
   <br />
-	<label for="test_page_top_text">Clanek</label>
+	  <label for="test_page_top_text">
+	  	 <%= 'Clanek' unless @test_page.test_type_id == 4 %>
+			 <%= 'URL audionahravky' if @test_page.test_type_id == 4 %>
+	  </label>
   <br />
-  <%= text_area 'test_page', 'top_text', 'cols'=>80, 'rows'=>20 %>
+	
+  <%= text_area 'test_page', 'top_text', 'cols'=>80, 'rows'=>20 unless @test_page.test_type_id == 4 %>
+	<%= text_field 'test_page', 'top_text' if @test_page.test_type_id == 4 %>
   
+	<% if @test_page.test_type_id != 6 && @test_page.test_type_id != 7 %>
   <br />
 	
 	 <label for="test_page_text_text">Cviceni</label>
@@ -81,8 +82,12 @@
    <br />
 	 
 	 <%= text_area 'test_page', 'test_text', 'rows'=>20, 'cols'=>80 %>  
-    
+  
+	<% end %>
+	  
   <br />
+	
+	
     
    <%= submit_tag '[Ulozit]' %>
 

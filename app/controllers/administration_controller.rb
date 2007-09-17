@@ -8,10 +8,10 @@ class AdministrationController < ApplicationController
 	end
 	
 	def list
-		@test_pages_pages = Paginator.new self, TestPage.find(:all, :conditions => [ "test_type_id == ?", id] ).length, 10, params[:page]
+		@test_pages_pages = Paginator.new self, TestPage.find(:all ).length, 10, params[:page]
 		@test_pages = TestPage.find :all, 
-									:group =>  "test_type_id",  
-									:order => 'position',
+									#:group =>  "test_type_id",  
+									:order => 'language_id, test_type_id, position',
 									:limit  =>  @test_pages_pages.items_per_page,
 									:offset =>  @test_pages_pages.current.offset
 									
@@ -29,6 +29,25 @@ class AdministrationController < ApplicationController
 	def new
 		@test_page = TestPage.new
 		
+    @test_page.test_type_id = params[:id]
+    case @test_page.test_type_id
+     # when 4 #de_audio
+     # when 6 #de_korresp
+     # when 7 #de_grammar
+     # when 3 #de_orig
+     # when 5 #de_text
+      when 3..7  
+        @test_page.language_id = 2
+        
+      when 1 #en_orig
+        @test_page.language_id = 1
+      when 2 #fr_orig
+        @test_page.language_id = 3
+     
+   end
+   
+    params[:id] = nil
+    
 		@testTypes = TestType.find :all
 		@languages = Language.find :all		
 	end
@@ -47,6 +66,8 @@ class AdministrationController < ApplicationController
 		@test_page = TestPage.find params[:id]
 		@testTypes = TestType.find :all
 		@languages = Language.find :all		
+    
+    
 	end
 	
 	def update

@@ -77,7 +77,7 @@ class TwikiFormator
 	def formatEmptyLine(line)
 		
 		line.gsub! /^[ \r\t\n]*$/, '<br />'
-
+    
 		line
 		
 			

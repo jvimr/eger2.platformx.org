@@ -1,8 +1,9 @@
 Seznam textu
 
-<table border="1">
+<table border="1" width="100%">
 
-<tr><th >autor</th><th>nazev</th><th>fertig</th><th>skore</th><th>testovat</th></tr>
+<tr  bgcolor="#f1f1e5">
+	<th >autor</th><th>nazev</th><th>fertig</th><th>skore</th><th>testovat</th></tr>
 
 <% for text in @test_pages %>
 
@@ -11,13 +12,20 @@ Seznam textu
 	   <td><%= text.description %></td>
      <td> <%= text.fertig ? "J" : "N" %> </td>
 		 <td> <%= text.skore %> </td>
-     <td> <%= link_to "testovat>", { :action=> 'texte_test', :id=>text }  %> </td>
+     <td> <%= link_to "opravit>", { :action=> 'texte_test', :id=>text }  %> 
+		 <%= link_to "testovat >", { :action=> 'texte_test', :id=>text, :clearcache=>true }  %>
+		 </td>
 	</tr>
 	
 	
 <% end %>
 
 </table>
+<br/>
+[ Total: <%= @test_pages.length %> Test(s), attempted <%= @attempted_tests_count %> test(s) ( <%= @attempted_tests_percent %>), <%= @total_questions_count %> question(s) ]
+<br/>
+[ Completed: <%= @completed_tests_count %> Test(s) ( <%= @completed_tests_percent %> ), <%= @correct_answers_count %> correct answer(s), Score : <%= @total_score %>] 
+
 
 <%= 
 link_to 'Previous page', { :page => @test_pages_pages.current.previous } if @test_pages_pages.current.previous 

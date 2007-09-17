@@ -96,6 +96,7 @@ class TwikiFormatorTest < Test::Unit::TestCase
 								
 				l = t.format(line)		
 				
+				
 				@logger.debug "line [" + line + "] converted to [" + l + "]"
 	end
 		
