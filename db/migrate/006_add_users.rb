@@ -6,7 +6,7 @@ class AddUsers < ActiveRecord::Migration
 		t.column :password, :string, { :null=>true } 
   	end
 	
-	User.create :login=> 'admin'
+	User.create :login=> 'admin', :password=>'d65fcf8709ca1a34ab9342566a0b0eabe0e4f83e'
 	User.create :login=> 'hanny'
   end
 
