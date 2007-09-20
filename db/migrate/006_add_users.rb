@@ -11,7 +11,7 @@ class AddUsers < ActiveRecord::Migration
     
 	  User.create :login=> 'hanny'
     
-    add_column :users, :deleted, :boolean, {:default=>false}
+   # add_column :users, :deleted, :boolean, {:default=>false}
   end
 
   def self.down

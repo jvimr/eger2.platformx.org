@@ -59,13 +59,14 @@ class InputFieldsFormator
             
             l + " />"
           
+            storingOptions = itemVal[:correct_vals].empty?
           
             options.split("|").each  do |option| #iterate over each option
             
               option.strip!
             
               #cut out * and whitespaces before option
-              stripped = option.sub! /^\*[ \t]*/ , "*"#TODO just for testing - replace with ""
+              stripped = option.sub! /^\*[ \t]*/ , ""#TODO just for testing - replace with ""
 
               #if this is correct value and there are no correct values stored
               if stripped && storingOptions #store correct value
@@ -74,7 +75,7 @@ class InputFieldsFormator
                 ApplicationController.logger.info "storing correct value  #{option} value #{option} for editobox id #{inputFieldIndex - 1}"
               end #if stripped...
             end #options.split .... do
-              
+              l
           end #line.gsub!..
         end
         

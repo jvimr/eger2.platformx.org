@@ -169,7 +169,7 @@ class EvaluatorController < ApplicationController
 		@test_page = TestPage.find params[:id]
 		
 		@test_page.top_text =  @f.format @test_page.top_text
-		@test_page.test_text = InputFieldsFormator.format(@f.format( @test_page.test_text), test_result_params)
+		@test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params))
     
     
 	end

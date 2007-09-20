@@ -70,6 +70,15 @@ class AdministrationController < ApplicationController
     
 	end
 	
+  
+  def destroy
+    t = TestPage.find(params[:id]).destroy 
+    #t.deleted = true
+    #t.save
+    
+    redirect_to :action => 'list'
+  end
+  
 	def update
 		@test_page = TestPage.find(params[:id])
 		

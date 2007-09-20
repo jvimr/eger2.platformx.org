@@ -7,10 +7,6 @@ class UsersRenameToLogin < ActiveRecord::Migration
     User.create :login=> 'hanny'
     
     
-    create_table :nic do |t|
-      t.column :id, :primary_key
-      t.column :text, :string
-    end
   end
 
   def self.down

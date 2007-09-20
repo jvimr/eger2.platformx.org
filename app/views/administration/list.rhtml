@@ -14,11 +14,12 @@
   	 <td><%=text.language.language_name %></td>
 		 <td><%= text.test_type.name%></td>
      <td><%= text.author %></td>	
-	   <td><%= text.description %></td>
+	   <td><%= text.name %></td>
      
      <td> 
 		    <%= link_to "upravit", { :action=> 'edit', :id=>text }  %> &nbsp; 
 		    <%= link_to "zobrazit", { :action=> 'view', :id=>text }  %> &nbsp;
+				<%= link_to 'smazat', { :action => 'destroy', :id => text }, :confirm => 'Opravdu smazat?', :method => :post %>
 		 </td>
 	</tr>
 	

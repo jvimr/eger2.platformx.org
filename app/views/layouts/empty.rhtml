@@ -1,13 +1,42 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> -->
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= @title %></title>
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
-<body>
+<body bgcolor="#EBECDC" leftmargin=0 topmargin=0 background="/images/ind-bg.gif">
+
+<br><br>
+
+<table width="692" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr align="center" valign="top">
+<td width="692" height="262" colspan="0" rowspan="0">
+<img src="/images/01.jpg" width="692" height="262" alt="" border="0"></td></tr>
+
+<tr align="center" valign="top"><td width="692" height="29" colspan="0" rowspan="0">
+<a href="http://147.228.13.100:8080/eger/app/template/TestList.vm/lang/en/start/true;"><img src="/images/02-english.jpg" width="692" height="29" alt="" border="0"></a></td></tr>
+
+<tr align="center" valign="top"><td width="692" height="25" colspan="0" rowspan="0">
+<a href="<%= url_for :controller=>'evaluator', :escape=>false , :action=>'home' %>"><img src="/images/03-deutsch.jpg" width="692" height="25" alt="" border="0"></a></td></tr>
+
+<tr align="center" valign="top"><td width="692" height="27" colspan="0" rowspan="0">
+<a href="http://147.228.13.100:8080/eger/app/template/TestList.vm/lang/fr/start/true;"><img src="/images/04-francais.jpg" width="692" height="27" alt="" border="0"></a></td></tr>
+
+<tr align="center" valign="top"><td width="692" height="83" colspan="0" rowspan="0">
+	
+<a href=" <%= url_for :controller=>'administration', :action=>'login', :escape=>false %> "> <img src="/images/05.jpg" width="692" height="83" alt="" border="0"></a></td></tr>
+
+</table>
+
+
+
+<br />
+
 
 <p style="color: green"><%= flash[:notice] %></p>
 

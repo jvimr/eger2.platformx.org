@@ -8,7 +8,7 @@ Seznam audionahravek
 
   <tr>
      <td><%= text.author %></td>	
-	   <td><%= text.description %></td>
+	   <td><%= text.name %></td>
      <td> <%= text.fertig ? "J" : "N" %> </td>
 		 <td> <%= text.skore %> </td>
      <td> <%= link_to "opravit>", { :action=> 'audio_test', :id=>text }  %>
