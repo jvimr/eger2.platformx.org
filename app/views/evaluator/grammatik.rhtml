@@ -1,4 +1,4 @@
-
+<div class="tabitems">
 
 <% for text in @test_pages %>
   <b> <%= text.name %> </b> <br />
@@ -9,6 +9,7 @@
 	
 	
 <% end %>
+</div>
 
 <%= link_to 'Previous page', { :page => @test_pages_pages.current.previous } if @test_pages_pages.current.previous %>
 <%= link_to 'Next page', { :page => @test_pages_pages.current.next } if @test_pages_pages.current.next %> 

@@ -21,14 +21,17 @@
 <% end %>
 
 </table>
-<br/>
+<%= 
+link_to 'Previous page', { :page => @test_pages_pages.current.previous }, 'class'=>'menu' if @test_pages_pages.current.previous 
+%>
+<%= link_to 'Next page', { :page => @test_pages_pages.current.next }, 'class'=>'menu' if @test_pages_pages.current.next 
+%> 
+<% if @test_pages_pages.current.next || @test_pages_pages.current.previous %>
+<br />
+<% end %>
+
 <div class="tabitems"">
 [ Insgesamt: <%= @test_pages.length %> Test(s), <!--attempted <%= @attempted_tests_count %> Test(en)  ( <%= @attempted_tests_percent %>),-->  <%= @total_questions_count %> Frage(n) ]
 <br/>
 [ Fertig: <%= @completed_tests_count %> Test(s) ( <%= @completed_tests_percent %> ), <%= @correct_answers_count %> richtige Antwort(en), Skore : <%= @total_score %>] 
 </div>
-<%= 
-link_to 'Previous page', { :page => @test_pages_pages.current.previous }, 'class'=>'menu' if @test_pages_pages.current.previous 
-%>
-<%= link_to 'Next page', { :page => @test_pages_pages.current.next }, 'class'=> 'menu' if @test_pages_pages.current.next 
-%> 
