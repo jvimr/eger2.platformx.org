@@ -159,15 +159,10 @@ class EvaluatorController < ApplicationController
     
     test_result_params = get_test_result params[:id]
     
-    
-    
-		@title = "Online ubungen texte"
-    
-    
-    
-		
 		@test_page = TestPage.find params[:id]
 		
+    @title = "Online Übungen Texte - " +  @test_page.name
+    
 		@test_page.top_text =  @f.format @test_page.top_text
 		@test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params))
     

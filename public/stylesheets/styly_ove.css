@@ -17,10 +17,28 @@ P.fragen
  	{ font-family: verdana; color: #e04613; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px;  }
 A.menu
 	{ font-family: verdana; color: #0e4613; font-size: 11px;  text-decoration: none; }
+div.slovnik
+	{ font-family: verdana; color: #0e4613; font-size: 11px;  text-decoration: none; }	
+A.vmenu
+	{ font-family: verdana; color: #0e4613; font-size: 12px;  text-decoration: none; }
+vmenu.hover
+	{ font-family: verdana; color: #0e8855; font-size: 12px;  text-decoration: none; }		
+P.vmenu
+	{ font-family: verdana; color: #0e4613; font-size: 12px;  text-decoration: none; }	
 A.text
 	{ font-family: verdana; color: #ff9804; font-size: 11px;  text-decoration: none; }
 UL.normalni
 	{ font-family: verdana; color: Gray; font-size: 11px;  text-decoration: none; text-align: justify; }	
+H2
+	{ font-family: verdana; color: Gray; font-size: 13px;  text-decoration: none; text-align: justify; font-weight: bold;   }
+div.test_text
+  { font-family: verdana;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
+td.div.test_text
+  { font-family: verdana;  font-size: 12px;  text-decoration: none; text-align: justify;   }	
+div.tabitems
+  { font-family: verdana;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
+tr.tabitems
+  { font-family: verdana;  font-size: 12px;  text-decoration: none; text-align: justify;   }			
 BLOCKQUOTE
 	{ font-family: verdana; color: #e04613; font-size: 11px; text-align: left; letter-spacing: 1px; }
 TD.d

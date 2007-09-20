@@ -18,11 +18,11 @@ class TwikiFormator
 			
 			if /^[ \t]*\|.*\|[ \r\n\t]*$/ =~ l   #if this line contains table
 			   
-				l.sub! /^[ \t]*\|/, "<tr>\n <td>"  #replace first pipe with table row start
+				l.sub! /^[ \t]*\|/, "<tr>\n <td><div class=\"test_text\">"  #replace first pipe with table row start
 				
-				l.sub! /\|[ \t\r\n]*$/, "</td></tr>\n"  #replace last pipe with table row end
+				l.sub! /\|[ \t\r\n]*$/, "</div></td></tr>\n"  #replace last pipe with table row end
 				
-				l.gsub! /\|/ , "</td>\n <td>" #replace all remaining pipes with cell delimiter
+				l.gsub! /\|/ , "</div></td>\n <td><div class=\"test_text\">" #replace all remaining pipes with cell delimiter
 				
 				if !tableStarted  
 					l = "<table border=\"1\">" + l 

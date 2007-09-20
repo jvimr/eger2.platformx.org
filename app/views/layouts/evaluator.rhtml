@@ -10,71 +10,89 @@
   <%= stylesheet_link_tag 'styly_ove' %>
 </head>
 <body background="/images/bg.gif" text="Gray" link="Green" vlink="Gray" alink="Gray" leftmargin=0 topmargin=0>
-
 <table 
  width="100%"
  border="0" cellpadding="0" align="left">
    <tr align="left" valign="top">
-     <td height="150" colspan="2" align="left" valign="top" background="/eger/images/pozadi_head.jpg">
+     <td height="150" colspan="3" align="left" valign="top" background="/images/pozadi_head.jpg">
 
 <img src="/images/face_grant.jpg" height="150" width="900" alt="head logo"/>
   </td></tr>
 
 
-<tr> <td colspan="2">
-<hr />
-<div class="radek_odkazu">&nbsp;[<a href="http://www.zcu.cz">ZCU</a>]&nbsp;[FEK]&nbsp;[KJA]&nbsp;[Contact us]&nbsp;[CESNET]&nbsp;[FRVS]&nbsp;[IIK]&nbsp;[WD]&nbsp;[LEHRERONLINE]&nbsp;[JESTA.NET]&nbsp;</div>
-<hr />
+<tr > <td colspan="3" bgcolor="#f1f1e5">
+
+
+<div class="vmenu">
+<%= odkazy = { 
+ 'FEK'=>                     'http://webtodate.fek.zcu.cz/pages/Hlavni.htm',
+'KJA'=>                     'http://webtodate.fek.zcu.cz/pages/katedry/KJA/index.htm',
+'kontakt'=>              'mailto:ove@kja.zcu.cz',
+'CESNET'=>          'http://www.cesnet.cz/',
+'FRVŠ'=>                    'http://www.frvs.cz/',
+'IIK Duesseldorf'=> 'http://www.iik-duesseldorf.de/',
+'Forum WD'=>                'http://www.wirtschaftsdeutsch.de/',
+'Lehrer Online'=>           'http://www.lehrer-online.de/index.htm'
+ }
+ 
+  l = ""
+  odkazy.each do |name, url |
+		l += "&nbsp;[<a href=\"#{url}\" class=\"vmenu\">#{name}</a>]&nbsp;"
+  end
+   l
+%>
+
 
 </td></tr>
-
-
-
-<br />
-
-
 	<tr align="left" valign="top">
-	  <td width="200" height="250" colspan="0" rowspan="0" align="right" valign="top" bgcolor="#f1f1e5">
+	  <td width="200" height="250" colspan="0" rowspan="0" align="right" valign="top" >
 
 <table cellpadding="10" valign="top" width="200">
   <tr valign="top">
     <td align="right">
 		
-		-<%= link_to "home", {:action => 'home', :controller=> 'evaluator'}, 'class' => 'menu' %> <br />
-		- <%= link_to "arbeitsblatter handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator'}, :class=>'menu' %> <br />
-		-<%= link_to "arbeitsblatter grammatik", { :action => 'grammatik', :controller=>'evaluator'} , :class=>'menu' %><br />
-			-<%= link_to "online ubungen audio", { :action=>'audio', :controller=>'evaluator'} , :class=>'menu' %><br />
-			-<%= link_to "online ubungen texte", { :action=>'texte', :controller=>'evaluator'}, :class=>'menu'  %><br />
+		<%= link_to "Home", {:action => 'home', :controller=> 'evaluator'}, 'class' => 'menu' %> <br />
+		<%= link_to "Grammatik", { :action => 'grammatik', :controller=>'evaluator'} , :class=>'menu' %> <br />
+		<%= link_to "Handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator'}, :class=>'menu' %> <br />
+<!-- 		<%= link_to "handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator'}, :class=>'menu' %><br /> -->
+	 
+			<%= link_to "Online Übungen Audio", { :action=>'audio', :controller=>'evaluator'} , :class=>'menu' %> <br />
+			<%= link_to "Online Übungen Texte", { :action=>'texte', :controller=>'evaluator'}, :class=>'menu'  %> <br />
+			<%= link_to "Grammatische Tests", { :action=>'texte_orig', :controller=>'evaluator'}, :class=>'menu'  %> <br />
 			
 			<br />
-			-<a href="mailt:ove@kja.zcu.cz" class="menu" >mail me</a>		<br />
-			-kontakt <br />
-			-FRVS <br/>
-			-links <br />
+			
+			<a href="<%= odkazy['kontakt'] %>" class="menu">Kontakt</a> <br />
+			<a href="<%= odkazy['FRVŠ'] %>" class="menu">FRVS</a> <br/>
+			<a href="http://www.kja.zcu.cz/dlinks.html" class="menu">Links</a> <br />
+			
+    </td></tr>
+		 <tr valign="top" bgcolor="#f1f1e5"> 
+		 <td align="right">
 			    <a href="http://slovnik.seznam.cz/sl.fcgi?src_trg=cz_de" target="dictionary" class="menu">Wörterbuch</a>
   <br>
 
   
 <form action="http://slovnik.seznam.cz/sl.fcgi" method="get" name="slovnik" target="onlineDictionary">
-            
-  CZ-&gt;DE<input type="radio" name="src_trg" value="cz_de"> &nbsp;
-  DE-&gt;CZ<input type="radio" name="src_trg" value="de_cz" checked>
+  <div class="slovnik">          
+  CZ&nbsp;&gt;DE<input type="radio" name="src_trg" value="cz_de">&nbsp;DE&nbsp;&gt;CZ<input type="radio" name="src_trg" value="de_cz" checked>
   <br>
   <input type="Text" name="word" value="" size="15"><br/>
   <input type="submit" name="Preloz" value="übersetzen">
-
+</div>
   
 </form>
 
-  
-  <br>
 			
-		</td>
+
 		
 		</td></tr></table>
 		
+		</td>
 		
-		    <td width="100%" height="900" colspan="0" rowspan="0" align="left" valign="top">
+		<!-- <td width="1px" bgcolor="#f1f1e5" >&nbsp;</td> -->
+		
+		    <td width="100%" height="100%" colspan="0" rowspan="0" align="left" valign="top">
 	<!-- 	<td class="obsah" width="80%" valign="top">  -->
 <p style="color: green"><%= flash[:notice] %></p>
       <table width="100%" cellpadding="10"><tr><td>
