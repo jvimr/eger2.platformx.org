@@ -31,7 +31,8 @@ link_to 'Previous page', { :page => @test_pages_pages.current.previous }, 'class
 <% end %>
 
 <div class="tabitems"">
-[ Insgesamt: <%= @test_pages.length %> Test(s), <!--attempted <%= @attempted_tests_count %> Test(en)  ( <%= @attempted_tests_percent %>),-->  <%= @total_questions_count %> Frage(n) ]
+[ Insgesamt: <%= pluralize @test_pages.length, 'Test' %>, <!--attempted <%= @attempted_tests_count %> Test(en)  ( <%= @attempted_tests_percent %>),-->   <%= pluralize @total_questions_count, 'Frage', 'Fragen' %> ]
 <br/>
-[ Fertig: <%= @completed_tests_count %> Test(s) ( <%= @completed_tests_percent %> ), <%= @correct_answers_count %> richtige Antwort(en), Skore : <%= @total_score %>] 
+[ Fertig: <%= pluralize @completed_tests_count, 'Test', 'Tests' %>  ( <%= @completed_tests_percent %> ), <%= pluralize @correct_answers_count, 'richtig Antwort', 'richtige Antworten' %>, Skore : <%= @total_score %>] 
 </div>
+

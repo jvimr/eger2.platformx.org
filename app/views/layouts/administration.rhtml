@@ -43,8 +43,9 @@
 			
 		</td>
 		<td class="obsah" width="80%" valign="top">
+			<% if flash[:notice] %>
 <p style="color: green"><%= flash[:notice] %></p>
-
+      <% end %>
 <%= yield  %>
 			
 		</td>

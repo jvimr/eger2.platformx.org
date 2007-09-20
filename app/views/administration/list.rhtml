@@ -1,8 +1,8 @@
-<table border="1">
+<table border="1" class="tabitems" width="100%"'>
 
 <tr>
 	
-	<th>typ</th>
+	<th >typ</th>
 	<th >autor</th>
 	<th>nazev</th>
   <th>&nbsp;</th>	
@@ -10,7 +10,7 @@
 
 <% for text in @test_pages %>
 
-  <tr>
+  <tr class="tabitems">
   
 		 <td><%= text.test_type.name%></td>
      <td><%= text.author %></td>	

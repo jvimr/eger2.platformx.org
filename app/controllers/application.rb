@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
       ['Kontakt', 'mailto:ove@kja.zcu.cz'],
       ['CESNET', 'http://www.cesnet.cz/'],
       ['FRVŠ', 'http://www.frvs.cz/'],
-      ['IIK Duesseldorf', 'http://www.iik-duesseldorf.de/'],
+      ['IIK Düsseldorf', 'http://www.iik-duesseldorf.de/'],
       ['Forum WD', 'http://www.wirtschaftsdeutsch.de/'],
       ['Lehrer Online', 'http://www.lehrer-online.de/index.htm']
       ]
