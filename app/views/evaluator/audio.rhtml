@@ -1,16 +1,17 @@
-Seznam audionahravek
+<h2>Seznam audionahravek</h2>
 
 <table border="1" width="100%" valign="top">
 
-<tr  bgcolor="#f1f1e5"><th >autor</th><th>nazev</th><th>fertig</th><th>skore</th><th>testovat</th></tr>
+<tr  bgcolor="#f1f1e5" align="left">
+	<th >Autor</th><th>name</th><th>Fertig</th><th>Skore</th><th>&nbsp;</th></tr>
 
 <% for text in @test_pages %>
 
-  <tr>
+  <tr class="tabitems">
      <td><%= text.author %></td>	
 	   <td><%= text.name %></td>
-     <td> <%= text.fertig ? "J" : "N" %> </td>
-		 <td> <%= text.skore %> </td>
+     <td align="center"> <%= text.fertig ? "J" : "N" %> </td>
+		 <td align="center"> <%= text.skore %> </td>
      <td> <%= link_to "opravit>", { :action=> 'audio_test', :id=>text }  %>
 		 <%= link_to "testovat >", { :action=> 'audio_test', :id=>text, :clearcache=>true } %>
 		  </td>
@@ -21,10 +22,11 @@ Seznam audionahravek
 
 </table>
 <br/>
-[ Total: <%= @test_pages.length %> Test(s), attempted <%= @attempted_tests_count %> test(s) ( <%= @attempted_tests_percent %>), <%= @total_questions_count %> question(s) ]
+<div class="tabitems"">
+[ Insgesamt: <%= @test_pages.length %> Test(s), <!--attempted <%= @attempted_tests_count %> Test(en)  ( <%= @attempted_tests_percent %>),-->  <%= @total_questions_count %> Frage(n) ]
 <br/>
-[ Completed: <%= @completed_tests_count %> Test(s) ( <%= @completed_tests_percent %> ), <%= @correct_answers_count %> correct answer(s), Score : <%= @total_score %>] 
-
+[ Fertig: <%= @completed_tests_count %> Test(s) ( <%= @completed_tests_percent %> ), <%= @correct_answers_count %> richtige Antwort(en), Skore : <%= @total_score %>] 
+</div>
 <%= 
 link_to 'Previous page', { :page => @test_pages_pages.current.previous } if @test_pages_pages.current.previous 
 %>

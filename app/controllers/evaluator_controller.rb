@@ -25,7 +25,7 @@ class EvaluatorController < ApplicationController
 	def pages_de(id)
 		
 		#@test_pages = TestPage.find(:all).select {|a| a.TestType.name == 'de_korresp'}
-		@test_pages_pages = Paginator.new self, TestPage.find(:all, :conditions => [ "test_type_id == ?", id] ).length, 10, params[:page]
+		@test_pages_pages = Paginator.new self, TestPage.find(:all, :conditions => [ "test_type_id == ?", id] ).length, 30, params[:page]
 	    @test_pages = TestPage.find :all, 
 									:conditions => [ "test_type_id == ?", id],  
 		              				:order => 'position',
@@ -92,7 +92,7 @@ class EvaluatorController < ApplicationController
           @completed_tests_count += 1 if p.fertig
           
           p.skore = round1((p.skore.to_f / res.length) * 100 ).to_s + " %" if res.length > 0
-          p.skore = "" if res.length == 0
+          p.skore = "&nbsp;" if res.length == 0
    
  
     end #@test_pages.each.....
