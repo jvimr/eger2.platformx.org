@@ -88,5 +88,26 @@ class AdministrationController < ApplicationController
 		else
 			 render :action => 'edit'
 		end		
-	end
+  end
+
+  def up
+    
+    tp = TestPage.find(params[:id])
+    
+    tp.move_higher
+    tp.save
+    
+    redirect_to :action => 'list'  
+    
+  end
+  
+  def down
+    
+    tp = TestPage.find(params[:id])
+    
+    tp.move_lower
+    tp.save
+    
+    redirect_to :action => 'list'
+  end
 end

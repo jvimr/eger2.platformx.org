@@ -7,5 +7,7 @@ class TestPage < ActiveRecord::Base
 	belongs_to :test_type
 	
 	attr_accessor :skore, :fertig
+  
+  acts_as_list :scope=> :test_type
 	
 end

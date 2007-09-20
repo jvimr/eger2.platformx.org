@@ -1,45 +1,45 @@
 H1 
-	{ font-family: verdana; color: #243141; font-size: 12px; font-weight: bold; }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #243141; font-size: 12px; font-weight: bold; }
 
 P.paticka 
- 	{ font-family: verdana; color: #243141; font-size: 9px; text-decoration: none; text-align: left;}
+ 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #243141; font-size: 9px; text-decoration: none; text-align: left;}
 P.head 
- 	{ font-family: verdana; color: #ff9804; font-size: 11px; text-decoration: none; letter-spacing: 1px;}	
+ 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #ff9804; font-size: 11px; text-decoration: none; letter-spacing: 1px;}	
 P.n 
- 	{ font-family: verdana; color: black; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px;}
+ 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: black; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px;}
 P.menu
-	{ font-family: verdana; color: #0e4613; font-size: 11px; line-height: 20px; text-align: right; letter-spacing: 1px; }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0e4613; font-size: 11px; line-height: 20px; text-align: right; letter-spacing: 1px; }
 P.menu2
-	{ font-family: verdana; color: #e04613; font-size: 11px; line-height: 20px; text-align: right; letter-spacing: 1px; }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #e04613; font-size: 11px; line-height: 20px; text-align: right; letter-spacing: 1px; }
 P.kurz 
- 	{ font-family: verdana; color: #0e4613; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px; font-style: italic; }
+ 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0e4613; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px; font-style: italic; }
 P.fragen 
- 	{ font-family: verdana; color: #e04613; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px;  }
+ 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #e04613; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px;  }
 A.menu
-	{ font-family: verdana; color: #0e4613; font-size: 11px;  text-decoration: none; }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif ; color: #0e4613; font-size: 11px;  text-decoration: none; }
 div.slovnik
-	{ font-family: verdana; color: #0e4613; font-size: 11px;  text-decoration: none; }	
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0e4613; font-size: 11px;  text-decoration: none; }	
 A.vmenu
-	{ font-family: verdana; color: #0e4613; font-size: 12px;  text-decoration: none; }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0e4613; font-size: 12px;  text-decoration: none; }
 vmenu.hover
-	{ font-family: verdana; color: #0e8855; font-size: 12px;  text-decoration: none; }		
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0e8855; font-size: 12px;  text-decoration: none; }		
 P.vmenu
-	{ font-family: verdana; color: #0e4613; font-size: 12px;  text-decoration: none; }	
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0e4613; font-size: 12px;  text-decoration: none; }	
 A.text
-	{ font-family: verdana; color: #ff9804; font-size: 11px;  text-decoration: none; }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #ff9804; font-size: 11px;  text-decoration: none; }
 UL.normalni
-	{ font-family: verdana; color: Gray; font-size: 11px;  text-decoration: none; text-align: justify; }	
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 11px;  text-decoration: none; text-align: justify; }	
 H2
-	{ font-family: verdana; color: Gray; font-size: 13px;  text-decoration: none; text-align: justify; font-weight: bold;   }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 13px;  text-decoration: none; text-align: justify; font-weight: bold;   }
 div.test_text
-  { font-family: verdana;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
+  { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
 td.div.test_text
-  { font-family: verdana;  font-size: 12px;  text-decoration: none; text-align: justify;   }	
+  { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }	
 div.tabitems
-  { font-family: verdana;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
+  { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
 tr.tabitems
-  { font-family: verdana;  font-size: 12px;  text-decoration: none; text-align: justify;   }			
+  { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }			
 BLOCKQUOTE
-	{ font-family: verdana; color: #e04613; font-size: 11px; text-align: left; letter-spacing: 1px; }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #e04613; font-size: 11px; text-align: left; letter-spacing: 1px; }
 TD.d
- 	{ font-family: verdana; color: #e04613; font-size: 11px; line-height: 15px; text-align: justify;  }
+ 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #e04613; font-size: 11px; line-height: 15px; text-align: justify;  }
