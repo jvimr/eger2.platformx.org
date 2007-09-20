@@ -2,6 +2,10 @@ class AdministrationController < ApplicationController
 	
 	before_filter :login_required
 	
+  def initialize
+    super
+  end
+  
 	def index
 		list
 	  	render :action => 'list'

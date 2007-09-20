@@ -9,26 +9,37 @@
 </head>
 <body background="images/bg.gif" text="Gray" link="Green" vlink="Gray" alink="Gray" leftmargin=0 topmargin=0>
 
-<div class="nad_hlavicka"><h1><%= @title %></h1></div>
 
-<hr />
-<div class="radek_odkazu">&nbsp;[<a href="http://www.zcu.cz">ZCU</a>]&nbsp;[FEK]&nbsp;[KJA]&nbsp;[Contact us]&nbsp;[CESNET]&nbsp;[FRVS]&nbsp;[IIK]&nbsp;[WD]&nbsp;[LEHRERONLINE]&nbsp;[JESTA.NET]&nbsp;</div>
-<hr />
+<table 
+ width="100%"
+ border="0" cellpadding="0" align="left">
+   <tr align="left" valign="top">
+     <td height="150" colspan="3" align="left" valign="top" background="/images/pozadi_head.jpg">
+
+<img src="/images/face_grant.jpg" height="150" width="900" alt="head logo"/>
+  </td></tr>
+
+
+<tr > <td colspan="3" bgcolor="#f1f1e5">
+
+<div class="vmenu">
+<%= 
+ 
+  l = ""
+  @odkazy.each do |x|
+    
+		l += "&nbsp;[<a href=\"#{x[1]}\" class=\"vmenu\">#{x[0]}</a>]&nbsp;"
+  end
+   l
+%>
+</td></tr>
+<tr><td>
 
 <table border="0" width="100%">
 	<tr align="left" valign="top">
 	  <td width="200" height="250" colspan="0" rowspan="0" align="right" valign="top" bgcolor="#f1f1e5">
 
-		
-		-<%= link_to "home", {:action => 'index'},  'class' => 'menu' %> <br />
-		- <%= link_to "zadat novy Arbeitsblater handelskorrespondenz", { :action=> 'new', :id=> 6}, 'class'=>'menu' %> <br />
-		- <%= link_to "zadat novy Arbeitsblater grammatik", { :action=> 'new', :id=> 7}, 'class'=>'menu' %> <br />
-		- <%= link_to "zadat novy ubungen audio", { :action=> 'new', :id=> 4}, 'class'=>'menu' %> <br />
-		- <%= link_to "zadat novy ubungen texte", { :action=> 'new', :id=> 5}, 'class'=>'menu' %> <br />
-			
-			<br />
-			
-			<%= link_to "logout", { :action=>'logout', :controller=>'users'}, 'class'=>'menu' %>
+    <%= render "administration/_leftnav_admin" %>
 			
 		</td>
 		<td class="obsah" width="80%" valign="top">
@@ -40,7 +51,7 @@
 	</tr>
 </table>
 
-
+</td></tr></table>
 
 <hr>
 <div class="paticka"><small><center>(C) ZCU 2007 (paticka)</center></small></div>

@@ -10,6 +10,7 @@
   <%= stylesheet_link_tag 'styly_ove' %>
 </head>
 <body background="/images/bg.gif" text="Gray" link="Green" vlink="Gray" alink="Gray" leftmargin=0 topmargin=0>
+	
 <table 
  width="100%"
  border="0" cellpadding="0" align="left">
@@ -24,20 +25,12 @@
 
 
 <div class="vmenu">
-<%= odkazy = { 
- 'FEK'=>                     'http://webtodate.fek.zcu.cz/pages/Hlavni.htm',
-'KJA'=>                     'http://webtodate.fek.zcu.cz/pages/katedry/KJA/index.htm',
-'kontakt'=>              'mailto:ove@kja.zcu.cz',
-'CESNET'=>          'http://www.cesnet.cz/',
-'FRVŠ'=>                    'http://www.frvs.cz/',
-'IIK Duesseldorf'=> 'http://www.iik-duesseldorf.de/',
-'Forum WD'=>                'http://www.wirtschaftsdeutsch.de/',
-'Lehrer Online'=>           'http://www.lehrer-online.de/index.htm'
- }
+<%= 
  
   l = ""
-  odkazy.each do |name, url |
-		l += "&nbsp;[<a href=\"#{url}\" class=\"vmenu\">#{name}</a>]&nbsp;"
+  @odkazy.each do |x|
+    
+		l += "&nbsp;[<a href=\"#{x[1]}\" class=\"vmenu\">#{x[0]}</a>]&nbsp;"
   end
    l
 %>
@@ -51,41 +44,8 @@
   <tr valign="top">
     <td align="right">
 		
-		<%= link_to "Home", {:action => 'home', :controller=> 'evaluator'}, 'class' => 'menu' %> <br />
-		<%= link_to "Grammatik", { :action => 'grammatik', :controller=>'evaluator'} , :class=>'menu' %> <br />
-		<%= link_to "Handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator'}, :class=>'menu' %> <br />
-<!-- 		<%= link_to "handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator'}, :class=>'menu' %><br /> -->
-	 
-			<%= link_to "Online Übungen Audio", { :action=>'audio', :controller=>'evaluator'} , :class=>'menu' %> <br />
-			<%= link_to "Online Übungen Texte", { :action=>'texte', :controller=>'evaluator'}, :class=>'menu'  %> <br />
-			<%= link_to "Grammatische Tests", { :action=>'texte_orig', :controller=>'evaluator'}, :class=>'menu'  %> <br />
-			
-			<br />
-			
-			<a href="<%= odkazy['kontakt'] %>" class="menu">Kontakt</a> <br />
-			<a href="<%= odkazy['FRVŠ'] %>" class="menu">FRVS</a> <br/>
-			<a href="http://www.kja.zcu.cz/dlinks.html" class="menu">Links</a> <br />
-			
-			
-    </td></tr>
-		 <tr valign="top" bgcolor="#f1f1e5"> 
-		 <td align="right">
-			    <a href="http://slovnik.seznam.cz/sl.fcgi?src_trg=cz_de" target="dictionary" class="menu">Wörterbuch</a>
-  <br>
-
-  
-<form action="http://slovnik.seznam.cz/sl.fcgi" method="get" name="slovnik" target="onlineDictionary">
-  <div class="slovnik">          
-  CZ&nbsp;&gt;DE<input type="radio" name="src_trg" value="cz_de">&nbsp;DE&nbsp;&gt;CZ<input type="radio" name="src_trg" value="de_cz" checked>
-  <br>
-  <input type="Text" name="word" value="" size="15"><br/>
-  <input type="submit" name="Preloz" value="übersetzen">
-</div>
-  
-</form>
-
-			
-
+		<%= render 'evaluator/_leftnav_eval', { :odkazy=> @odkazy } %>
+		
 		
 		</td></tr></table>
 		

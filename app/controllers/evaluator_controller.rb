@@ -1,6 +1,7 @@
 class EvaluatorController < ApplicationController
 	
 	def initialize
+    super 
 		@f = TwikiFormator.new
 	end
 	
@@ -161,7 +162,7 @@ class EvaluatorController < ApplicationController
     
 		@test_page = TestPage.find params[:id]
 		
-    @title = "Online Übungen Texte - " +  @test_page.name
+    @title = "Online Übungen Text - " +  @test_page.name
     
 		@test_page.top_text =  @f.format @test_page.top_text
 		@test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params))
@@ -226,7 +227,7 @@ class EvaluatorController < ApplicationController
 	end
 	
 	def audio_test
-		@title = "Online ubungen audio"
+		
     
     session[:tests][params[:id]] = nil if params[:clearcache]
 		
@@ -234,9 +235,12 @@ class EvaluatorController < ApplicationController
     
 		@test_page = TestPage.find params[:id]
     
+    
+    
     @test_page.top_text =  @f.format @test_page.top_text
     @test_page.test_text = InputFieldsFormator.format(@f.format( @test_page.test_text), test_result_params)
     
+    @title = "Online Übungen Audio - " + @test_page.name
     
 	end
 	
@@ -255,6 +259,48 @@ class EvaluatorController < ApplicationController
 			#flash[:notice] = 'Test id ' + params[:id] + ' successfully done.'
 			redirect_to :action => 'audio'		
 			
-   	end	
+	end
 	
+  def texte_orig
+    @title = "Gramatische teste"
+    
+    session[:tests] = nil if params[:clearcache]
+    
+    
+    pages_de 3
+    
+    count_results
+    
+  end
+  
+  def texte_orig_test
+   
+      session[:tests][params[:id]] = nil if params[:clearcache]
+    
+    test_result_params = get_test_result params[:id]
+    
+    @test_page = TestPage.find params[:id]
+    
+    @title = "Gramatische Test - " +  @test_page.name
+    
+    @test_page.top_text =  @f.format @test_page.top_text
+    @test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params))
+    
+    
+  end
+  
+  def texte_orig_eval
+    
+    test_result = get_test_result params[:id]
+      
+    fieldCount = params[:test_field_count]  
+    
+    correctCount = eval_test params, test_result, fieldCount
+    
+    
+    flash[:notice] = "Richtig #{correctCount} aus #{fieldCount} Fragen" if correctCount > 0 && fieldCount.to_i > 0
+      
+    
+    redirect_to :action => 'texte_orig'    
+  end
 end
