@@ -8,7 +8,7 @@ class AdministrationController < ApplicationController
 	end
 	
 	def list
-		@test_pages_pages = Paginator.new self, TestPage.find(:all ).length, 10, params[:page]
+		@test_pages_pages = Paginator.new self, TestPage.find(:all ).length, 30, params[:page]
 		@test_pages = TestPage.find :all, 
 									#:group =>  "test_type_id",  
 									:order => 'language_id, test_type_id, position',
