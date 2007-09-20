@@ -12,17 +12,19 @@
 <hr />
 
 <% form_tag :action => 'audio_eval', :id => @test_page do %>
-<%= submit_tag '[Send]' %>
+
 <br />
 <%= @test_page.test_text %>
   
 	<br />
 	
+
+<%= submit_tag '[Absenden]' %>
   
 <% end %>
 
 
-<%= link_to 'Back', :action => 'audio' %>
+<%= link_to 'Zuruck', :action => 'audio' %>
 
 
 
