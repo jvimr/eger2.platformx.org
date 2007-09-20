@@ -29,7 +29,7 @@
 </div>
 
 <%= 
-link_to 'Previous page', { :page => @test_pages_pages.current.previous } if @test_pages_pages.current.previous 
+link_to 'Previous page', { :page => @test_pages_pages.current.previous }, 'class'=>'menu' if @test_pages_pages.current.previous 
 %>
-<%= link_to 'Next page', { :page => @test_pages_pages.current.next } if @test_pages_pages.current.next 
+<%= link_to 'Next page', { :page => @test_pages_pages.current.next }, 'class'=>'menu' if @test_pages_pages.current.next 
 %> 
