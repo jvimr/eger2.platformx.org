@@ -27,6 +27,7 @@ class AdministrationController < ApplicationController
 	end
 	
 	def new
+    @title = "Novy test" 
 		@test_page = TestPage.new
 		
     @test_page.test_type_id = params[:id]
