@@ -178,7 +178,7 @@ class EvaluatorController < ApplicationController
     correctCount = eval_test params, test_result, fieldCount
     
     
-    flash[:notice] = "Spravne #{correctCount} z #{fieldCount} otazek" if correctCount > 0 && fieldCount.to_i > 0
+    flash[:notice] = "Richtig #{correctCount} aus #{fieldCount} Fragen" if correctCount > 0 && fieldCount.to_i > 0
       
     
     redirect_to :action => 'texte'    
@@ -249,7 +249,7 @@ class EvaluatorController < ApplicationController
       correctCount = eval_test params, test_result, fieldCount
     
     
-      flash[:notice] = "Spravne #{correctCount} z #{fieldCount} otazek" if correctCount > 0 && fieldCount.to_i > 0
+      flash[:notice] = "Richtig #{correctCount} aus #{fieldCount} Fragen" if correctCount > 0 && fieldCount.to_i > 0
      
       
 			#flash[:notice] = 'Test id ' + params[:id] + ' successfully done.'

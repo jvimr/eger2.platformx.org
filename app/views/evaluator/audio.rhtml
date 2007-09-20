@@ -3,7 +3,7 @@
 <table border="1" width="100%" valign="top">
 
 <tr  bgcolor="#f1f1e5" align="left">
-	<th >Autor</th><th>name</th><th>Fertig</th><th>Skore</th><th>&nbsp;</th></tr>
+	<th >Autor</th><th>Name</th><th>Fertig</th><th>Skore</th><th>&nbsp;</th></tr>
 
 <% for text in @test_pages %>
 
@@ -11,7 +11,7 @@
      <td><%= text.author %></td>	
 	   <td><%= text.name %></td>
      <td align="center"> <%= text.fertig ? "J" : "N" %> </td>
-		 <td align="center"> <%= text.skore %> </td>
+		 <td align="center">&nbsp;<%= text.skore %> </td>
      <td> <%= link_to "opravit>", { :action=> 'audio_test', :id=>text }  %>
 		 <%= link_to "testovat >", { :action=> 'audio_test', :id=>text, :clearcache=>true } %>
 		  </td>
