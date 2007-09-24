@@ -36,7 +36,7 @@ div.test_text
 td.div.test_text
   { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }	
 div.tabitems
-  { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
+  {  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
 tr.tabitems
   { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }			
 BLOCKQUOTE

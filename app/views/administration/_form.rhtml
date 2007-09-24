@@ -83,7 +83,8 @@
    <br />
 	 
 	 <%= text_area 'test_page', 'test_text', 'rows'=>20, 'cols'=>80 %>  
-  
+        <% else %>
+	<%= hidden_field 'test_page', 'test_text' %>
 	<% end %>
 	  
   <br />

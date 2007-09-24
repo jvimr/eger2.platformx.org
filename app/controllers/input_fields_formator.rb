@@ -21,10 +21,14 @@ class InputFieldsFormator
     
   end
   
-  def InputFieldsFormator.format(text, test_result)
+  def InputFieldsFormator.format(text, test_result, doRadioBr = true, shuffleOptions = true)
     
     inputFieldIndex = 0
     ret = ""
+    
+    radioBr = ""
+    radioBr = "<br />" if doRadioBr
+    
     
     text.each do |line|
         
@@ -108,19 +112,19 @@ class InputFieldsFormator
             selected = ""
             selected = " selected=\"true\" " if !stripped.nil? && itemVal[:selected] === oi.to_s
             
-            opts << "  <option value=\"#{oi}\" #{selected}>" + option.strip + "</option>\n"
+            opts << "  <option value=\"#{oi}\" #{selected}>" + option.strip + "</option>"
             oi += 1
           end
           
           opts.sort!{rand(20)-10}
           
           
-          lstart = "\n<select name=\"test_field_#{ inputFieldIndex}\" "
+          lstart = " <select name=\"test_field_#{ inputFieldIndex}\" "
           if itemVal[:correct]
             lstart += " disabled=\"true\" "
           end
-          lstart += " >\n"
-          lend = "</select>\n"
+          lstart += " >"
+          lend = "</select>"
           
           inputFieldIndex += 1
           
@@ -151,11 +155,11 @@ class InputFieldsFormator
             itemVal[:correct_vals] << oi.to_s if storingOptions && stripped  
             selected = ""
             selected = " checked=\"true\"" if stripped && itemVal[:selected] === (oi.to_s)
-            opts << "  <input type=\"radio\" name=\"test_field_#{ inputFieldIndex}\" value=\"#{oi}\" #{ds} #{selected}>" + option.strip + "</input><br />\n"
+            opts << "  <input type=\"radio\" name=\"test_field_#{ inputFieldIndex}\" value=\"#{oi}\" #{ds} #{selected}>" + option.strip + "</input>#{radioBr}"
             oi += 1
           end
           
-          opts.sort!{rand(20) - 10}
+          opts.sort!{rand(20) - 10} if shuffleOptions
 
           inputFieldIndex += 1
           

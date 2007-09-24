@@ -43,6 +43,7 @@ class AdministrationController < ApplicationController
      # when 5 #de_text
       when 3..7  
         @test_page.language_id = 2
+	@test_page.test_text = ' '
         
       when 1 #en_orig
         @test_page.language_id = 1
