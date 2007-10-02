@@ -1,6 +1,6 @@
 <h2>Gramatische tests</h2>
 
-<table border="1" width="100%">
+<table border="0" width="100%">
 
 <tr  bgcolor="#f1f1e5" align="left" >
 	<th >Autor</th><th>Name</th><th>Fertig</th><th>Skore</th><th> &nbsp;</th></tr>
@@ -31,6 +31,7 @@ link_to 'Previous page', { :page => @test_pages_pages.current.previous }, 'class
 <br />
 <% end %>
 
+<hr />
 <div class="tabitems"">
 [ Insgesamt: <%= pluralize @test_pages.length, 'Test' %>, <!--attempted <%= @attempted_tests_count %> Test(en)  ( <%= @attempted_tests_percent %>),-->   <%= pluralize @total_questions_count, 'Frage', 'Fragen' %> ]
 <br/>

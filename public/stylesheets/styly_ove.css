@@ -1,6 +1,7 @@
 H1 
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #243141; font-size: 12px; font-weight: bold; }
-
+body, li,p
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 12px;  text-decoration: none; text-align: justify; }
 P.paticka 
  	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #243141; font-size: 9px; text-decoration: none; text-align: left;}
 P.head 
@@ -16,7 +17,7 @@ P.kurz
 P.fragen 
  	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #e04613; font-size: 11px; line-height: 15px; text-align: justify; letter-spacing: 1px;  }
 A.menu
-	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif ; color: #0e4613; font-size: 11px;  text-decoration: none; }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif ; color: #0e4613; font-size: 12px;  text-decoration: none; }
 div.slovnik
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #0e4613; font-size: 11px;  text-decoration: none; }	
 A.vmenu
@@ -39,6 +40,8 @@ div.tabitems
   {  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
 tr.tabitems
   { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }			
+th
+  { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }	
 BLOCKQUOTE
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #e04613; font-size: 11px; text-align: left; letter-spacing: 1px; }
 TD.d

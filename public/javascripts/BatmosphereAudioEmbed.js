@@ -25,10 +25,10 @@ function embedPlayer(MP3title,MP3URL) {
    document.writeln("<object width='280' height='69'>"); // Width is the WMP minimum. Height = 45 (WMP controls) + 24 (WMP status bar) 
    document.writeln("<param name='type' value='" + objTypeTag + "'>");
    document.writeln("<param name='src' value='" + audioURL + "'>");
-   document.writeln("<param name='autostart' value='1'>");
-   document.writeln("<param name='showcontrols' value='0'>");
+   document.writeln("<param name='autostart' value='0'>");
+   document.writeln("<param name='showcontrols' value='1'>");
    document.writeln("<param name='showstatusbar' value='1'>");
-   document.writeln("<embed src ='" + audioURL + "' type='" + objTypeTag + "' autoplay='true' autostart='1' width='280' height='69' controller='0' showstatusbar='1' bgcolor='#ffffff'></embed>"); 
+   document.writeln("<embed src ='" + audioURL + "' type='" + objTypeTag + "' autoplay='false' autostart='0' width='280' height='69' controller='0' showstatusbar='1' bgcolor='#ffffff'></embed>"); 
    
    // Firefox and Opera Win require both autostart and autoplay
    document.writeln("</object>");
