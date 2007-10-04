@@ -12,8 +12,9 @@
 	   <td><%= text.name %></td>
      <td align="center"> <%= text.fertig ? "J" : "N" %> </td>
 		 <td align="center">&nbsp;<%= text.skore %> </td>
-     <td> <%= link_to "opravit>", { :action=> 'audio_test', :id=>text }  %>
-		 <%= link_to "testovat >", { :action=> 'audio_test', :id=>text, :clearcache=>true } %>
+     <td> 
+		 <%= link_to "[korrigieren]", { :action=> 'audio_test', :id=>text } unless text.fertig || text.skore <= 0.0 %>
+		 <%= link_to "[testen]", { :action=> 'audio_test', :id=>text, :clearcache=>true } %>
 		  </td>
 	</tr>
 	

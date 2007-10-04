@@ -92,8 +92,8 @@ class EvaluatorController < ApplicationController
           
           @completed_tests_count += 1 if p.fertig
           
-          p.skore = round1((p.skore.to_f / res.length) * 100 ).to_s + " %" if res.length > 0
-          p.skore = "&nbsp;" if res.length == 0
+          p.skore = round1((p.skore.to_f / res.length) * 100 ) if res.length > 0
+          p.skore = 0.0 if res.length == 0
    
  
     end #@test_pages.each.....

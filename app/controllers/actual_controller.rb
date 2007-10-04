@@ -1,4 +1,7 @@
 class ActualController < ApplicationController
+  
+  layout  'administration'
+  
   def index
     list
     render :action => 'list'
