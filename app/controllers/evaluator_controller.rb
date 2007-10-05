@@ -13,7 +13,7 @@ class EvaluatorController < ApplicationController
 	end
 	
 	def home
-		@title = "Hlavicka - rozcestnik"
+		@title = "Home"
 		
 		@actuals = Actual.find( :all, :order => 'position' ).select{|a| a.visible? }
 		#@actuals = Actual.find(:all).select{|a| a.visible? }
@@ -36,7 +36,7 @@ class EvaluatorController < ApplicationController
 	
 	def korrespondenz
 			
-			@title = "Arbeitsblatter handelskorrespondenz"
+			@title = "Arbeitsblatter Handelskorrespondenz"
 			
 			@DE_KORRESP_ID = 6
 			
@@ -47,7 +47,7 @@ class EvaluatorController < ApplicationController
 	end
 	
 	def grammatik
-		@title = "Arbeitsblatter grammatik"
+		@title = "Arbeitsblatter Grammatik"
 		
 		
 		pages_de 7
@@ -56,7 +56,7 @@ class EvaluatorController < ApplicationController
 	end
 	
 	def audio
-		@title = "Online ubungen audio"
+		@title = "Online Übungen Audio"
     
     session[:tests] = nil if params[:clearcache]
 		
@@ -117,7 +117,7 @@ class EvaluatorController < ApplicationController
   end
   
 	def texte
-		@title = "Online ubungen texte"
+		@title = "Online Übungen Texte"
     
     session[:tests] = nil if params[:clearcache]
     

@@ -49,6 +49,8 @@ class InputFieldsFormator
             
             if itemVal[:selected]
               l += " value=\"#{itemVal[:selected]}\" "
+            
+            
             end
             
             if(itemVal[:correct])
@@ -61,8 +63,8 @@ class InputFieldsFormator
             
             inputFieldIndex += 1
             
-            l += " />"  if showRightAns
-            l += " >" unless showRightAns
+#            l += " />"  if showRightAns
+#            l += " >" unless showRightAns
             
           
             storingOptions = itemVal[:correct_vals].empty?
@@ -82,7 +84,8 @@ class InputFieldsFormator
               end #if stripped...
             end #options.split .... do
               
-              l += itemVal[:correct_vals].to_s + "</input>" if showRightAns
+              l += " value=\"#{itemVal[:correct_vals].join('/') }\"" if showRightAns
+              l += " />"
               
               l
           end #line.gsub!..

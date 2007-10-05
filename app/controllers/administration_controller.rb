@@ -3,7 +3,8 @@ class AdministrationController < ApplicationController
 	before_filter :login_required
 	
   def initialize
-    super
+    super 
+    @f = TwikiFormator.new
   end
   
 	def index
@@ -27,7 +28,34 @@ class AdministrationController < ApplicationController
 	def view
 		@test_page = TestPage.find params[:id]
 		
-		
+		#@title = "Online Übungen Text - " +  @test_page.name
+    test_result_params = []
+    
+    #@test_page.top_text =  @f.format @test_page.top_text
+    #@test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params, true, false, true))
+    
+    case @test_page.test_type_id
+      
+      when 4  #audio - no formating of top_text, normal formating of test_text
+        @title = "Online Übungen Audio - " +  @test_page.name 
+        @test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params, false, false, true), "0")
+        render 'administration/audio_test'
+      when 6 #korresp or grammar  - no formating
+        @test_pages = TestPage.find( :all,:order => ' position' ).select{|t| t.test_type_id == 6}
+        @title = "Arbeitsblatter Handelskorrespondenz"
+        render 'administration/korresp'
+      when 7 #korresp or grammar  - no formating
+        @test_pages = TestPage.find( :all,:order => ' position' ).select{|t| t.test_type_id == 7}
+        @title = "Arbeitsblatter Gramatik"
+        render 'administration/korresp'    
+        
+      else #test pages - twiki formating of top text, full formating of test_text
+        @title = "Online Übungen Text - " +  @test_page.name
+        @test_page.top_text =  @f.format @test_page.top_text
+        @test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params, true, false, true))
+        render 'administration/texte_test'
+        
+    end
 	end
 	
 	def new

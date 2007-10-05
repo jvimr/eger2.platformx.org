@@ -1,0 +1,24 @@
+<small>
+[<%= @test_page.author %>: <%= @test_page.name %> ] 	
+</small>
+
+<h2><b><%= @test_page.description %></b></h2>
+
+<div class="test_text">
+<%= @test_page.top_text %>
+</div>
+<hr />
+
+<% form_tag :action => 'index', :id => @test_page do %>
+<div class="test_text">
+<%= @test_page.test_text %>
+</div>  
+	<br />
+	
+<!--  <%= submit_tag '[Absenden]' %> -->
+<% end %>
+
+<%= link_to '&lt; Zurück', {:action => 'index'}, :class=>'menu' %>
+
+
+

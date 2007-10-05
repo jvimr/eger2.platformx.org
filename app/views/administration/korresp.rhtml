@@ -1,0 +1,14 @@
+<div class="tabitems">
+
+<% for text in @test_pages %>
+  <b> <%= text.name %> </b> <br />
+<!--	> link <br /> -->
+	<%= text.top_text %>
+	<hr />
+	 
+	 
+<% end %>
+
+
+
+<%= link_to 'Zurück', {:action => 'index'}, 'class'=>'menu' %>
