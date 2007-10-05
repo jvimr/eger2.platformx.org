@@ -2,7 +2,7 @@ require 'logger'
 
 class TwikiFormator
 	
-	def format(text)
+	def format(text, tableBorder = "1")
 		
 		ret = ""
 		
@@ -25,7 +25,7 @@ class TwikiFormator
 				l.gsub! /\|/ , "</div></td>\n <td><div class=\"test_text\">" #replace all remaining pipes with cell delimiter
 				
 				if !tableStarted  
-					l = "<table border=\"1\">" + l 
+					l = "<table border=\"#{tableBorder}\">" + l 
 					tableStarted = true
 				end				
 				

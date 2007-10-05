@@ -1,20 +1,24 @@
-<h1>Listing actuals</h1>
-
+<h2>Atkuality</h2> (zobrazuji se na <%= link_to 'uvodni strance testovani', {:action=>'home', :controller=>'evaluator'}, {"target"=>"_blank"} %>)
+<br />
+<br />
 <table>
-  <tr>
-  <% for column in Actual.content_columns %>
-    <th><%= column.human_name %></th>
-  <% end %>
-  </tr>
+ <!-- <tr>
+  
+    <th>Text</th>
+    <th>&nbsp;</th>
+		<th>&nbsp;</th>
+  </tr>  -->
   
 <% for actual in @actuals %>
   <tr>
-  <% for column in Actual.content_columns %>
-    <td><%=h actual.send(column.name) %></td>
-  <% end %>
-    <td><%= link_to 'Show', :action => 'show', :id => actual %></td>
-    <td><%= link_to 'Edit', :action => 'edit', :id => actual %></td>
-    <td><%= link_to 'Destroy', { :action => 'destroy', :id => actual }, :confirm => 'Are you sure?', :method => :post %></td>
+  
+	<!-- <td><%= actual.position %></td> -->
+    <td><%= actual.text %></td>
+  
+  <!--  <td><%= link_to 'Show', :action => 'show', :id => actual %></td> -->
+    <td><%= link_to '[Upravit]', :action => 'edit', :id => actual %></td>
+    <td><%= link_to '[Smazat]', { :action => 'destroy', :id => actual }, :confirm => 'Opravdu smazat?', :method => :post %></td>
+		<td><small> <%= link_to "^", { :action=> 'up', :id=>actual }  %>&nbsp;<%= link_to "v", { :action=> 'down', :id=>actual }  %></small> &nbsp;</td>
   </tr>
 <% end %>
 </table>
@@ -24,4 +28,4 @@
 
 <br />
 
-<%= link_to 'New actual', :action => 'new' %>
+<%= link_to 'Nova aktualita', :action => 'new' %>

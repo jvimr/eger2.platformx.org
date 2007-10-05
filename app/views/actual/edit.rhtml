@@ -1,9 +1,9 @@
-<h1>Editing actual</h1>
+<h1>Editace aktuality</h1>
 
 <% form_tag :action => 'update', :id => @actual do %>
   <%= render :partial => 'form' %>
-  <%= submit_tag 'Edit' %>
+  <%= submit_tag '[Ulozit]' %>
 <% end %>
 
-<%= link_to 'Show', :action => 'show', :id => @actual %> |
-<%= link_to 'Back', :action => 'list' %>
+<!-- <%= link_to 'Show', :action => 'show', :id => @actual %> | -->
+<%= link_to 'Zpet', :action => 'list' %>

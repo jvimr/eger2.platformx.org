@@ -15,8 +15,8 @@ class EvaluatorController < ApplicationController
 	def home
 		@title = "Hlavicka - rozcestnik"
 		
-		
-		@actuals = Actual.find(:all).select{|a| a.visible? }
+		@actuals = Actual.find( :all, :order => 'position' ).select{|a| a.visible? }
+		#@actuals = Actual.find(:all).select{|a| a.visible? }
 		
 		#@actual_pages, @actuals = paginate , :per_page => 10
 				
@@ -238,7 +238,7 @@ class EvaluatorController < ApplicationController
     
     
     #@test_page.top_text =  @f.format @test_page.top_text
-    @test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params, false, false))
+    @test_page.test_text = @f.format(InputFieldsFormator.format( @test_page.test_text, test_result_params, false, false), "0")
     
     @title = "Online Übungen Audio - " + @test_page.name
     

@@ -21,7 +21,7 @@ class InputFieldsFormator
     
   end
   
-  def InputFieldsFormator.format(text, test_result, doRadioBr = true, shuffleOptions = true)
+  def InputFieldsFormator.format(text, test_result, doRadioBr = true, shuffleOptions = true, showRightAns = false)
     
     inputFieldIndex = 0
     ret = ""
@@ -61,7 +61,9 @@ class InputFieldsFormator
             
             inputFieldIndex += 1
             
-            l + " />"
+            l += " />"  if showRightAns
+            l += " >" unless showRightAns
+            
           
             storingOptions = itemVal[:correct_vals].empty?
           
@@ -79,6 +81,9 @@ class InputFieldsFormator
                 ApplicationController.logger.info "storing correct value  #{option} value #{option} for editobox id #{inputFieldIndex - 1}"
               end #if stripped...
             end #options.split .... do
+              
+              l += itemVal[:correct_vals].to_s + "</input>" if showRightAns
+              
               l
           end #line.gsub!..
         end
@@ -100,7 +105,8 @@ class InputFieldsFormator
             option.strip!
             
             #cut out * and whitespaces before option
-            stripped = option.sub! /^\*[ \t]*/ , "*"#TODO just for testing - replace with ""
+            stripped = option.sub! /^\*[ \t]*/ , "*" if showRightAns 
+            stripped = option.sub! /^\*[ \t]*/ , "" unless showRightAns 
 
             #if this is correct value and there are no correct values stored
             if stripped && storingOptions #store correct value
@@ -150,7 +156,8 @@ class InputFieldsFormator
           options.split("|").each  do |option|
             
             option.strip!
-            stripped = option.sub! /^\*/ , "*" #TODO just for testing - replace with ""
+            stripped = option.sub! /^\*/ , "*" if showRightAns 
+            stripped = option.sub! /^\*/ , "" unless showRightAns
           
             itemVal[:correct_vals] << oi.to_s if storingOptions && stripped  
             selected = ""

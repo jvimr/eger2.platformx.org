@@ -1,16 +1,15 @@
 <%= error_messages_for 'actual' %>
 
 <!--[form:actual]-->
-<p><label for="actual_text">Text</label><br/>
-<%= text_field 'actual', 'text'  %></p>
+<p><label for="actual_text">Text aktuality</label><br/>
+<%= text_area 'actual', 'text', 'cols' => 80, 'rows'=>20  %></p>
 
-<p><label for="actual_visible">Visible</label><br/>
-<select id="actual_visible" name="actual[visible]"><option value="false">False</option><option value="true">True</option></select></p>
 
-<p><label for="actual_create_date">Create date</label><br/>
-<%= datetime_select 'actual', 'create_date'  %></p>
 
-<p><label for="actual_position">Position</label><br/>
-<%= text_field 'actual', 'position'  %></p>
+ <p><label for="actual_position">Position: <%= @actual.position %></label><br/> </p> 
+ <p><label for="actual_visible">Visible: <%= @actual.visible %></label><br/> </p>
+
+
+
 <!--[eoform:actual]-->
 
