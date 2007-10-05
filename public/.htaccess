@@ -28,8 +28,10 @@ RewriteEngine On
 #   RewriteBase /myrailsapp
 #RewriteBase /
 #RewriteRule ^$ index.html [QSA]
+
+RewriteRule ^webalizeri$ webalizer/index.html
 RewriteRule ^([^.]+)$ $1.html [QSA]
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-f 
 #RewriteRule ^(.*)$ dispatch.cgi [QSA,L]
 RewriteRule ^(.*)$ dispatch.fcgi [QSA,L]
 # In case Rails experiences terminal errors

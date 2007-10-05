@@ -15,6 +15,10 @@ ActiveRecord::Schema.define(:version => 7) do
     t.column "language_name", :string, :limit => nil
   end
 
+  create_table "nic", :force => true do |t|
+    t.column "text", :string
+  end
+
   create_table "test_pages", :force => true do |t|
     t.column "language_id",  :integer,  :default => 1,     :null => false
     t.column "author",       :string,                      :null => false
@@ -34,8 +38,9 @@ ActiveRecord::Schema.define(:version => 7) do
   end
 
   create_table "users", :force => true do |t|
-    t.column "login",    :string, :null => false
-    t.column "password", :string, :null => false
+    t.column "login",    :string,                     :null => false
+    t.column "password", :string
+    t.column "deleted",  :boolean, :default => false
   end
 
 end
