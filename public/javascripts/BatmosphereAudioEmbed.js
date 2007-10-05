@@ -21,7 +21,7 @@ function embedPlayer(MP3title,MP3URL) {
    if (visitorOS != "Windows") { objTypeTag = "audio/mpeg"}; // The MIME type for Macs and Linux 
   
    document.writeln("<div>");
-   document.writeln("<strong style='font-size:18px; position:relative; top:-28px'>" + MP3title + "&nbsp;</strong>");  // Adjust font style to taste
+ //  document.writeln("<strong style='font-size:18px; position:relative; top:-28px'>" + MP3title + "&nbsp;</strong>");  // Adjust font style to taste
    document.writeln("<object width='280' height='69'>"); // Width is the WMP minimum. Height = 45 (WMP controls) + 24 (WMP status bar) 
    document.writeln("<param name='type' value='" + objTypeTag + "'>");
    document.writeln("<param name='src' value='" + audioURL + "'>");

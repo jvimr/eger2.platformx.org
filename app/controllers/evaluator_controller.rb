@@ -192,7 +192,7 @@ class EvaluatorController < ApplicationController
    # msg = "count #{fieldCount} " 
    
     correctCount = 0;
-    0.upto (fieldCount.to_i - 1) do |i|
+    0.upto(fieldCount.to_i - 1) do |i|
       name = "test_field_#{i}"
       
       val = params[name]
