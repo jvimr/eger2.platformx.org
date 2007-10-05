@@ -17,6 +17,12 @@ class UsersController < ApplicationController
   end
   
   def signup
+    
+    #comment out following 2 lines to get access to signup method to add new users
+    redirect_back_or_default :action => "welcome"
+    
+    return
+    
     case @request.method
       when :post
         @user = User.new(@params['user'])
@@ -32,6 +38,11 @@ class UsersController < ApplicationController
   end  
   
   def delete
+    
+    redirect_back_or_default :action => "welcome"
+    
+    return
+    
     if @params['id'] and @session['user']
       @user = User.find(@params['id'])
       @user.destroy
