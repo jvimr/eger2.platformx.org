@@ -33,7 +33,7 @@ link_to 'Previous page', { :page => @test_pages_pages.current.previous }, 'class
 <% end %>
 
 <hr />
-<div class="tabitems"">
+<div class="tabitems">
 [ Insgesamt: <%= pluralize @test_pages.length, 'Test' %>, <!--attempted <%= @attempted_tests_count %> Test(en)  ( <%= @attempted_tests_percent %>),-->   <%= pluralize @total_questions_count, 'Frage', 'Fragen' %> ]
 <br/>
 [ Fertig: <%= pluralize @completed_tests_count, 'Test', 'Tests' %>  ( <%= @completed_tests_percent %> ), <%= pluralize @correct_answers_count, 'richtig Antwort', 'richtige Antworten' %>, Skore : <%= @total_score %>] 
