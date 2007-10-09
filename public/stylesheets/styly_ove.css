@@ -2,8 +2,8 @@ H1
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #243141; font-size: 12px; font-weight: bold; }
 body, li,p
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 12px;  text-decoration: none; text-align: justify; }
-div.paticka 
- 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 9px; text-decoration: none; text-align: center;}
+P.paticka 
+ 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #243141; font-size: 9px; text-decoration: none; text-align: center;}
 P.head 
  	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #ff9804; font-size: 11px; text-decoration: none; letter-spacing: 1px;}	
 P.n 
