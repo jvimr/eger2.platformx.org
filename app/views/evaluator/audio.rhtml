@@ -1,13 +1,13 @@
 <h2>Seznam audionahravek</h2>
 
-<table border="0" width="100%" valign="top">
+<table border="0" width="100%" >
 
-<tr  bgcolor="#e7f1f1" align="left">
+<tr  bgcolor="#e7f1f1" align="left" valign="top">
 	<th >Autor</th><th>Name</th><th>Fertig</th><th>Skore</th><th>&nbsp;</th></tr>
 
 <% for text in @test_pages %>
 
-  <tr class="tabitems">
+  <tr class="tabitems" valign="top">
      <td><%= text.author %></td>	
 	   <td><%= text.name %></td>
      <td align="center"> <%= text.fertig ? "J" : "N" %> </td>
