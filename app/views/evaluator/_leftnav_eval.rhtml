@@ -9,9 +9,11 @@
 			
 			<br />
 			
+			<%= link_to "Podcasts", { :action=>'podcasts', :controller=>'evaluator'}, :class=>'menu'  %> <br />
 			<a href="<%= odkazy[2][1] %>" class="menu"><%= odkazy[2][0] %></a> <br />
 			<a href="<%= odkazy[4][1] %>" class="menu"><%= odkazy[4][0] %></a> <br/>
-			<a href="http://www.kja.zcu.cz/dlinks.html" class="menu">Links</a> <br />
+			<%= link_to "Links", {:action=>'links', :controller=>'evaluator' }, :class=> 'menu' %> <br />
+			<!--<a href="http://www.kja.zcu.cz/dlinks.html" class="menu">Links</a> <br /> -->
 			
 			
     </td></tr>

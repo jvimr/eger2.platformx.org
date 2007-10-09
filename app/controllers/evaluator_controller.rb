@@ -12,6 +12,14 @@ class EvaluatorController < ApplicationController
 		render :layout=>'empty'
 	end
 	
+  def podcasts
+    @title = "Podcasts"
+  end
+  
+  def links
+    @title = "Links"
+  end
+  
 	def home
 		@title = "Home"
 		
