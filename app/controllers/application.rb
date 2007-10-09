@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
       ['FRVŠ', 'http://www.frvs.cz/'],
       ['IIK Düsseldorf', 'http://www.iik-duesseldorf.de/'],
       ['Forum WD', 'http://www.wirtschaftsdeutsch.de/'],
-      ['Lehrer Online', 'http://www.lehrer-online.de/index.htm']
+      ['Lehrer Online', 'http://www.lehrer-online.de/']
       ]
     end
 end
