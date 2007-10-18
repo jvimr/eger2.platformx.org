@@ -1,5 +1,7 @@
 class ActualController < ApplicationController
   
+  before_filter :login_required
+  
   layout  'administration'
   
   def index
