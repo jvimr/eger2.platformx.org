@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   def signup
     
     #comment out following 2 lines to get access to signup method to add new users
-    redirect_back_or_default :action => "welcome"
+  #  redirect_back_or_default :action => "welcome"
     
-    return
+ #   return
     
     case @request.method
       when :post
