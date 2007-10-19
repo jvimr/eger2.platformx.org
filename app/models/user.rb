@@ -4,7 +4,7 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
 
   def self.authenticate(login, pass)
-    find_first(["login = ? AND password = ?", login, sha1(pass)])
+    find :first , :conditions => ["login = ? AND password = ?", login, sha1(pass)]
   end  
 
   def change_password(pass)

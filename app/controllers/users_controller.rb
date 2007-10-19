@@ -92,7 +92,13 @@ class UsersController < ApplicationController
         return
       end
       
-      
+      if (params['chpw']['password'].nil? ||
+          params['chpw']['password'].length < 3 || 
+          params['chpw']['password'].length > 40 )
+         
+         flash[:notice]  = "Heslo je prilis kratke"
+         return
+      end
     
       user.change_password(params['chpw']['password'])
       
