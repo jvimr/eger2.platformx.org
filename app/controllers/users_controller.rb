@@ -80,7 +80,7 @@ class UsersController < ApplicationController
     
       if params['chpw']['password'] != params['chpw']['password_confirmation']
         
-        flash[:notice]  = "Nove heslo neodpovida potvrzeninoveho hesla"    
+        flash[:notice]  = "Nove heslo neodpovida potvrzeni noveho hesla"    
         return
       end
     
