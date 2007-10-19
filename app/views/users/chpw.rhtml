@@ -1,0 +1,17 @@
+<%= start_form_tag :action=> "chpw" %>
+
+<div title="Change password" id="chpwform" class="form">
+  <h3>Zmena hesla uzivatele <%= @session['user'].login %></h3>
+  <%= error_messages_for 'chpw' %><br/>
+  
+  <label for="chpw_old_password">Stare heslo:</label><br/>
+  <%= password_field "chpw", "old_password", :size => 30 %><br/>
+  <label for="chpw_password">Nove heslo:</label><br/>
+  <%= password_field "chpw", "password", :size => 30 %><br/>
+  <label for="chpw_password_confirmation">Znovu nove heslo:</label><br/>
+  <%= password_field "chpw", "password_confirmation", :size => 30 %><br/>
+
+<input type="submit" value="[zmenit]" class="primary" />
+
+<%= end_form_tag %>
+
