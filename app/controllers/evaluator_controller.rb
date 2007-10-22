@@ -55,7 +55,7 @@ class EvaluatorController < ApplicationController
 	end
 	
 	def grammatik
-		@title = "Arbeitsblatter Grammatik"
+		@title = "Grammatische Tests"
 		
 		
 		pages_de 7
@@ -64,7 +64,7 @@ class EvaluatorController < ApplicationController
 	end
 	
 	def audio
-		@title = "Online Übungen Audio"
+		@title = "Die Liste der Hörtexte"
     
     session[:tests] = nil if params[:clearcache]
 		

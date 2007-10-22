@@ -2,6 +2,10 @@ H1
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #243141; font-size: 12px; font-weight: bold; }
 body, li,p
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 12px;  text-decoration: none; text-align: justify; }
+span.navod
+  { font-style: italic; font-size: 11px}
+div.navod-orig
+   { font-weight: bold; font-size: smaller;}	
 div.paticka 
  	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 9px; text-decoration: none; text-align: center;}
 P.head 
