@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
       @odkazy = [ 
       ['FEK', 'http://webtodate.fek.zcu.cz/pages/Hlavni.htm'],
       ['KJA', 'http://webtodate.fek.zcu.cz/pages/katedry/KJA/index.htm'],
-      ['Kontakt', 'mailto:ove@kja.zcu.cz'],
+      ['Kontakt', '/evaluator/kontakt'],
       ['CESNET', 'http://www.cesnet.cz/'],
       ['FRVŠ', 'http://www.frvs.cz/'],
       ['IIK Düsseldorf', 'http://www.iik-duesseldorf.de/'],

@@ -16,6 +16,14 @@ class EvaluatorController < ApplicationController
     @title = "Podcasts"
   end
   
+  def dics
+    @title = "Wörterbücher"
+  end
+  
+  def kontakt
+    @title = "Kontakt"
+  end
+  
   def links
     @title = "Links"
   end
