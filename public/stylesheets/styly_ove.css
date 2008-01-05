@@ -39,7 +39,10 @@ A.text
 UL.normalni
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 11px;  text-decoration: none; text-align: justify; }	
 H2
-	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 13px;  text-decoration: none; text-align: justify; font-weight: bold;   }
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 14px;  text-decoration: none; text-align: justify; font-weight: bold;   }
+H3
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 12px;  text-decoration: none; text-align: justify; font-weight: bold;   }
+	
 div.test_text
   { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;  font-size: 12px;  text-decoration: none; text-align: justify;   }		
 td.div.test_text
