@@ -1,27 +1,30 @@
-<%= link_to "Home", {:action => 'home', :controller=> 'evaluator'}, 'class' => 'menu' %> <br />
- <br />
-    <%= link_to "Online Übungen Audio", { :action=>'audio', :controller=>'evaluator'} , :class=>'menu' %> <br />
-    <%= link_to "Online Übungen Texte", { :action=>'texte', :controller=>'evaluator'}, :class=>'menu'  %> <br />
-    <%= link_to "Online Übungen Grammatik", { :action=>'texte_orig', :controller=>'evaluator'}, :class=>'menu'  %> <br />
+<%= link_to "Home", {:action => 'home', :controller=> 'evaluator'}, 'class' => 'menu' %><br />
+ 
+   <a href="javascript:return false" class="menu">Online Übungen</a><br >
+    <%= link_to "Audio ::", { :action=>'audio', :controller=>'evaluator'} , :class=>'menu' %><br />
+    <%= link_to "Texte ::", { :action=>'texte', :controller=>'evaluator'}, :class=>'menu'  %><br />
+    <%= link_to "Grammatik ::", { :action=>'texte_orig', :controller=>'evaluator'}, :class=>'menu'  %><br />
     <br />
-	  <%= link_to "Arbeitsblätter <br />Handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator'}, :class=>'menu' %> <br />
-    <br />
-		<%= link_to "Arbeitsblätter <br />Grammatik", { :action => 'grammatik', :controller=>'evaluator'} , :class=>'menu' %> <br />
+		<a href="javascript:return false" class="menu">Arbeitsblätter</a><br />
+	  <%= link_to "Handelskorrespondenz ::", { :action=> 'korrespondenz', :controller=>'evaluator'}, :class=>'menu' %><br />
+    
+		<%= link_to "Grammatik ::", { :action => 'grammatik', :controller=>'evaluator'} , :class=>'menu' %><br />
 
 <!-- 		<%= link_to "handelskorrespondenz", { :action=> 'korrespondenz', :controller=>'evaluator'}, :class=>'menu' %><br /> -->
 	 
 			
 			
 			<br />
-		
-		  <%= link_to "Wörterbücher", { :action=>'dics', :controller=>'evaluator'}, :class=>'menu'  %> <br />	
-			<%= link_to "Podcasts", { :action=>'podcasts', :controller=>'evaluator'}, :class=>'menu'  %> <br />
+		<a href="javascript:return false" class="menu">Sonstiges</a><br />
+		  <%= link_to "Wörterbücher ::", { :action=>'dics', :controller=>'evaluator'}, :class=>'menu'  %><br />	
+			<%= link_to "Podcasts ::", { :action=>'podcasts', :controller=>'evaluator'}, :class=>'menu'  %><br />
 
 <!-- frvs --><!--	<a href="<%= odkazy[4][1] %>" class="menu"><%= odkazy[4][0] %></a> <br/>  -->
-			<%= link_to "Links", {:action=>'links', :controller=>'evaluator' }, :class=> 'menu' %> <br />
+			<%= link_to "Links ::", {:action=>'links', :controller=>'evaluator' }, :class=> 'menu' %><br />
 			<!--<a href="http://www.kja.zcu.cz/dlinks.html" class="menu">Links</a> <br /> -->
-			<br />
-<!-- kontakt --><a href="<%= odkazy[2][1] %>" class="menu"><%= odkazy[2][0] %></a> <br /> 			
+			<!-- sem se budou pridavat ty stranky co si bude hanny psat sama :-) -->
+			
+<!-- kontakt --><!-- <a href="<%= odkazy[2][1] %>" class="menu"><%= odkazy[2][0] %></a> <br /> --> 			
 			
     </td></tr>
 		 <tr valign="top" bgcolor="#e7f1f1"> 
