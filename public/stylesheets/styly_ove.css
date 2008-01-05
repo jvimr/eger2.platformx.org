@@ -1,7 +1,10 @@
 H1 
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #243141; font-size: 12px; font-weight: bold; }
-body, li,p
+body, p
 	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 12px;  text-decoration: none; text-align: justify; }
+li
+	{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: Gray; font-size: 12px;  text-decoration: none; text-align: left; }
+
 span.navod
   { font-style: italic; font-size: 11px}
 div.navod-orig
